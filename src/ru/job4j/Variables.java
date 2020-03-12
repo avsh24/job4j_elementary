@@ -3,7 +3,7 @@ package ru.job4j;
 public class Variables {
     public static void main(String[] args) {
         int age = 18; //Возраст
-        boolean gender = false; //Пол
+        char gender = '\u2642'; //Пол
         double growth = 1.70; //Рост
         long bricks = 2147483648L; //количество кирпичей для постройки дома
         long bacteria = 2147483649L; //количество бактерий
