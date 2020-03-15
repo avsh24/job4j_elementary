@@ -7,7 +7,7 @@ public class FitTest {
     // Тест расчета идеальный вес для мужчин.
     @Test
     public void manWeight() {
-        int in = 170;
+        double in = 170;
         double expected = 80.5;
         double out = Fit.manWeight(in);
         Assert.assertEquals(expected, out, 0.01);
@@ -16,7 +16,7 @@ public class FitTest {
     // Тест расчета идеальный вес для женщин.
     @Test
     public void womanWeight() {
-        int in = 160;
+        double in = 160;
         double expected = 57.49999999999999;
         double out = Fit.womanWeight(in);
         Assert.assertEquals(expected, out, 0.01);
