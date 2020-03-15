@@ -5,11 +5,12 @@ import org.junit.Test;
 import ru.job4j.calculator.Fit;
 
 public class PointTest {
+    // Тест для проверки расстояний между точками в системе координат.
     @Test
-    public void manWeight() {
-//        int in = 170;
-//        double expected = 80.5;
-//        double out = Fit.manWeight(in);
-//        Assert.assertEquals(expected, out, 0.01);
+    public void distance() {
+        double in = 2.0;
+        double expected = 1.4142135623730951;
+        double out = Math.sqrt(in);
+        Assert.assertEquals(expected, out, 0.01);
     }
 }
