@@ -8,7 +8,14 @@ public class SqArea {
         return s;
     }
     public static void main(String[] args) {
-        double result1 = SqArea.square(4, 1);
-        System.out.println("p = 4, k = 1, real = " + result1);
+        double result = SqArea.square(4, 1);
+        System.out.println("p = 4, k = 1, real = " + result);
+
+        // Тесты для стороны прямоугольника.
+        int p = 4, k = 1;
+        double expected = 2.0;
+        double out = square(p, k);
+        boolean passed = expected == out;
+        System.out.println("p = 4, k = 1, real = " + passed);
     }
 }
