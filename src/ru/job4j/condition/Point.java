@@ -9,6 +9,7 @@ public class Point {
         double result = Point.distance(0, 0, 2, 0);
         System.out.println("result (0, 0) to (2, 0) " + result);
 
+        // Тест для проверки расстояний между точками в системе координат.
         double in = 2.0;
         double expected = 1.4142135623730951;
         double out = Math.sqrt(in);
