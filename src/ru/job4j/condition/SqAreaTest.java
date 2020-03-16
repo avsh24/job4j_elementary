@@ -10,7 +10,7 @@ public class SqAreaTest {
     @Test
     public void square() {
         int p = 4, k = 1;
-        double expected = 2.0;
+        double expected = 1.0;
         double out = SqArea.square(p, k);
         Assert.assertEquals(expected, out, 0.01);
     }
