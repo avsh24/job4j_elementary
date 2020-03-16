@@ -11,9 +11,9 @@ public class Fit {
     }
     public static void main(String[] args) {
         double man = Fit.manWeight(170);
-        double woman = Fit.womanWeight(162);
+        double woman = Fit.womanWeight(160);
         System.out.println("Man 170 is " + man);
-        System.out.println("Woman 162 is " + woman);
+        System.out.println("Woman 160 is " + woman);
 
         // Тест расчета идеальный вес для мужчин.
         double in = 170;
@@ -23,10 +23,10 @@ public class Fit {
         System.out.println("Man 170 is " + passed);
 
         // Тест расчета идеальный вес для женщин.
-        double in1 = 162;
-        double expected1 = 59.8;
+        double in1 = 160;
+        double expected1 = 57.49999999999999;
         double out1 = womanWeight(in1);
         boolean passed1 = expected1 == out1;
-        System.out.println("Woman 162 is " + passed1);
+        System.out.println("Woman 160 is " + passed1);
     }
 }
