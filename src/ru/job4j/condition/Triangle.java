@@ -5,7 +5,6 @@ public class Triangle {
         if (ab + ac > bc && ac + bc > ab && ab + bc > ac) {
             return true;
         }
-
         return false;
     }
 }
