@@ -7,7 +7,6 @@ public class MinDiapason {
             if (array[i] < min) {
                 min = array[i];
             }
-
         }
         return min;
     }
