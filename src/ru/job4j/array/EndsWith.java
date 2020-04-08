@@ -6,6 +6,7 @@ public class EndsWith {
         boolean result = true;
         for (int i = 0; i < post.length; i++) {
             if (word[i] >= post[i]) {
+                i = word.length - post.length;
                 result = false;
                 break;
             }
