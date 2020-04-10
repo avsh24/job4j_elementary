@@ -11,4 +11,34 @@ public class MatrixCheck {
         }
         return result;
     }
+
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int i = 0; i < board.length; i++) {
+            if (board[column][i] > 'X') {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
+    }
+
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[board.length - 1][0] != board[i][board.length - 1 - i]) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
 }
