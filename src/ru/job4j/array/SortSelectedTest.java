@@ -13,4 +13,20 @@ public class SortSelectedTest {
         int[] expect = new int[]{1, 2, 3, 4, 5};
         assertThat(result, is(expect));
     }
+
+    @Test
+    public void whenSort1() {
+        int[] input = new int[]{2, 5, 3, 1, 4};
+        int[] result = SortSelected.sort(input);
+        int[] expect = new int[]{1, 2, 3, 4, 5};
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenSort2() {
+        int[] input = new int[]{3, 1, 2};
+        int[] result = SortSelected.sort(input);
+        int[] expect = new int[]{1, 2, 3};
+        assertThat(result, is(expect));
+    }
 }
