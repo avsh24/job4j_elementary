@@ -5,7 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PointTest {
-
     @Test
     public void whenAreaSetThreePointsThenTriangleArea() {
         Point first = new Point(0, 0);
