@@ -1,6 +1,7 @@
 package ru.job4j.inheritance.animal;
 
 public class Animal {
+
     String name;
 
     public Animal() {
