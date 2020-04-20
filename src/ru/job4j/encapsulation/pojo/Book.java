@@ -1,4 +1,4 @@
-package ru.job4j.encapsulation.book;
+package ru.job4j.encapsulation.pojo;
 
 public class Book {
     private String name;
