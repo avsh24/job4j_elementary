@@ -18,36 +18,36 @@ public class Tracker {
     }
 
     public Item findAll() {
-        Item item = null;
+        Item result = null;
         for (int index = 0; index < position; index++) {
             Item current = items[index];
-                item = current;
+                result = current;
                 break;
         }
-        return item;
+        return result;
     }
 
     public Item findByName(String key) {
-        Item item = null;
+        Item result = null;
         for (int index = 0; index < position; index++) {
             Item current = items[index];
             if (current.getName().equals(key)) {
-                item = current;
+                result = current;
                 break;
             }
         }
-        return item;
+        return result;
     }
 
     public Item findById(String id) {
-        Item item = null;
+        Item result = null;
         for (int index = 0; index < position; index++) {
             Item current = items[index];
             if (current.getId().equals(id)) {
-                item = current;
+                result = current;
                 break;
             }
         }
-        return item;
+        return result;
     }
 }
