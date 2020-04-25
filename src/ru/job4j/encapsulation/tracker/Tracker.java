@@ -1,5 +1,6 @@
 package ru.job4j.encapsulation.tracker;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Tracker {
@@ -17,35 +18,27 @@ public class Tracker {
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
     }
 
-    public Item findAll() {
-        Item result = null;
-        for (int index = 0; index < position; index++) {
-            Item current = items[index];
-                result = current;
-                break;
-        }
+    public Item[] findAll() {
+        Item[] result = Arrays.copyOf(items, this.position);
         return result;
     }
 
-    public Item findByName(String key) {
-        Item result = null;
-        for (int index = 0; index < position; index++) {
-            Item current = items[index];
-            if (current.getName().equals(key)) {
-                result = current;
-                break;
+    public Item[] findByName(String key) {
+        int count = 0;
+        Item[] result = new Item[this.position];
+        for (int index = 0; index < this.position; index++) {
+            if (items[index].getName().equals(key)) {
+                result[count++] = this.items[index];
             }
         }
-        return result;
+        return Arrays.copyOf(result, count);
     }
 
     public Item findById(String id) {
         Item result = null;
-        for (int index = 0; index < position; index++) {
-            Item current = items[index];
-            if (current.getId().equals(id)) {
-                result = current;
-                break;
+        for (int index = 0; index < this.position; index++) {
+            if (items[index].getId().equals(id)) {
+                result = items[index];
             }
         }
         return result;

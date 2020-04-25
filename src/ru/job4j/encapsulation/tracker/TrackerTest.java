@@ -5,7 +5,6 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class TrackerTest {
-
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();
@@ -16,29 +15,29 @@ public class TrackerTest {
     }
 
     @Test
-    public void findItemByName() {
+    public void findItemAll() {
         Tracker tracker = new Tracker();
-        Item item = new Item("test1");
+        Item item = new Item("test2");
         tracker.add(item);
-        Item result = tracker.findByName(item.getName());
-        assertThat(result.getName(), is(item.getName()));
+        Item[] result = tracker.findAll();
+        assertThat(tracker.findAll(), is(result));
     }
 
     @Test
-    public void findItemAll() {
+    public void findItemByName() {
         Tracker tracker = new Tracker();
-        Item item = new Item("test1");
+        Item item = new Item("test3");
         tracker.add(item);
-        Item result = tracker.findAll();
-        assertThat(result.getName(), is(item.getName()));
+        Item[] result = tracker.findByName(item.getName());
+        assertThat(tracker.findByName(item.getName()), is(result));
     }
 
     @Test
     public void findItemById() {
         Tracker tracker = new Tracker();
-        Item item = new Item("test1");
+        Item item = new Item("test4");
         tracker.add(item);
         Item result = tracker.findById(item.getId());
-        assertThat(result.getName(), is(item.getName()));
+        assertThat(tracker.findById(item.getId()), is(result));
     }
 }
