@@ -39,6 +39,7 @@ public class Tracker {
         for (int index = 0; index < this.position; index++) {
             if (items[index].getId().equals(id)) {
                 result = items[index];
+                break;
             }
         }
         return result;
