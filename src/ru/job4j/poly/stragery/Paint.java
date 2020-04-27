@@ -5,6 +5,7 @@ public class Paint {
         draw(new Triangle());
         draw(new Square());
     }
+
     public static void draw(Shape shape) {
         System.out.println(shape.draw());
     }

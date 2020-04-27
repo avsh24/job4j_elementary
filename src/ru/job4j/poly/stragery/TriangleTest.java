@@ -13,10 +13,9 @@ public class TriangleTest {
         Triangle triangle = new Triangle();
         assertThat(triangle.draw(),
                 is(new StringJoiner(System.lineSeparator())
-                        .add("++++")
-                        .add("+     +")
-                        .add("+     +")
-                        .add("++++")
+                        .add("  ^  ")
+                        .add(" ^ ^ ")
+                        .add("^^^^^")
                         .toString()
                 )
         );
