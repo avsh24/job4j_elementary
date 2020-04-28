@@ -3,7 +3,6 @@ package ru.job4j.poly.stragery;
 import java.util.StringJoiner;
 
 public class Square implements Shape {
-
     @Override
     public String draw() {
         StringJoiner pic = new StringJoiner(System.lineSeparator());

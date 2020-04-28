@@ -1,9 +1,7 @@
 package ru.job4j.poly.stragery;
 
 import org.junit.Test;
-
 import java.util.StringJoiner;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
