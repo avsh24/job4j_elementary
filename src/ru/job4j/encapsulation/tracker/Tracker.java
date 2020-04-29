@@ -20,14 +20,12 @@ public class Tracker {
 
     public boolean replace(String id, Item item) {
         boolean result = false;
-            for (int index = indexOf(id); index < position; index++) {
-                if (items[index].getId().equals(id)) {
-                    items[index] = item;
-                    item.setId(id);
-                    result = true;
-                    break;
-                }
-            }
+        int index = indexOf(id);
+        if (index != -1) {
+            item.setId(id);
+            items[index] = item;
+            result = true;
+        }
         return result;
     }
 
