@@ -29,6 +29,18 @@ public class Tracker {
         return result;
     }
 
+    public boolean delete(String id) {
+        boolean result = false;
+        int index = indexOf(id);
+            if (items[index].getId().equals(id)) {
+                items[indexOf(id)] = null;
+                System.arraycopy(items, index + 1, items, index, items.length - index - 1);
+                position--;
+                result = true;
+            }
+        return result;
+    }
+
     private int indexOf(String id) {
         int result = -1;
         for (int index = 0; index < position; index++) {
