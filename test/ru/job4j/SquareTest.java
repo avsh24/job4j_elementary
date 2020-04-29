@@ -1,6 +1,8 @@
-package ru.job4j.poly.stragery;
+package ru.job4j;
 
 import org.junit.Test;
+import ru.job4j.poly.stragery.Square;
+
 import java.util.StringJoiner;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
