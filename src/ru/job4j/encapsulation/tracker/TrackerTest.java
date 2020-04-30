@@ -1,6 +1,7 @@
 package ru.job4j.encapsulation.tracker;
 
 import org.junit.Test;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
@@ -32,7 +33,8 @@ public class TrackerTest {
         Item bug = new Item("Bug");
         tracker.add(bug);
         String id = bug.getId();
-        tracker.delete(id);
+        Item item = new Item("Bug with description");
+        tracker.delete(id, item);
         assertThat(tracker.findById(id), is(nullValue()));
     }
 
