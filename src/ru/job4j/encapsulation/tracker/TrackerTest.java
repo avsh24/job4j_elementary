@@ -7,6 +7,7 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
 
 public class TrackerTest {
+
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();
@@ -33,8 +34,7 @@ public class TrackerTest {
         Item bug = new Item("Bug");
         tracker.add(bug);
         String id = bug.getId();
-        Item item = new Item("Bug with description");
-        tracker.delete(id, item);
+        tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
     }
 

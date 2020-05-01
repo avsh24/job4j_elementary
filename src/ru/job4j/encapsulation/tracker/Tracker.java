@@ -29,14 +29,12 @@ public class Tracker {
         return result;
     }
 
-    public boolean delete(String id, Item item) {
+    public boolean delete(String id) {
         boolean result = false;
         int index = indexOf(id);
-            if (items[index].getId().equals(id)) {
+            if (index != -1) {
                 items[indexOf(id)] = null;
-                item.setId(id);
-                items[index] = item;
-                System.arraycopy(items, index + 1, items, index, items.length - index - 1);
+                System.arraycopy(items, index + 1, items, index, position - index - 1);
                 position--;
                 result = true;
             }
