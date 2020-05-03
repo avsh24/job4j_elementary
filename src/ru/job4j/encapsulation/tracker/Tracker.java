@@ -33,6 +33,7 @@ public class Tracker {
         boolean result = false;
         int index = indexOf(id);
             if (index != -1) {
+                items[index] = null;
                 System.arraycopy(items, index + 1, items, index, position - index - 1);
                 position--;
                 result = true;
