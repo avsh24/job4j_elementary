@@ -15,8 +15,8 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);
-            } else if () {
-
+            } else if (select == 1) {
+                run = true;
             } else if (select == 6) {
                 run = false;
             }
@@ -39,5 +39,6 @@ public class StartUI {
         Scanner scanner = new Scanner(System.in);
         Tracker tracker = new Tracker();
         new StartUI().init(scanner, tracker);
+        
     }
 }
