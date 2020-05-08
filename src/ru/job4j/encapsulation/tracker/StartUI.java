@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StartUI {
     public void init(Scanner scanner, Tracker tracker) {
-        boolean run = false;
+        boolean run = true;
         while (run) {
             this.showMenu();
             System.out.println("Select: ");
@@ -16,7 +16,15 @@ public class StartUI {
                 Item item = new Item(name);
                 tracker.add(item);
             } else if (select == 1) {
-                run = true;
+                run = false;
+            } else if (select == 2) {
+                run = false;
+            } else if (select == 3) {
+                run = false;
+            } else if (select == 4) {
+                run = false;
+            } else if (select == 5) {
+                run = false;
             } else if (select == 6) {
                 run = false;
             }
@@ -32,7 +40,6 @@ public class StartUI {
         System.out.println("4. Find item by Id");
         System.out.println("5. Find items by name");
         System.out.println("6. Exit Program");
-        System.out.println("Select: ");
     }
 
     public static void main(String[] args) {
