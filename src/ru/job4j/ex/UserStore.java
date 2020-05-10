@@ -4,7 +4,7 @@ public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         int rsl = -1;
         for (int index = 0; index < users.length; index++) {
-            if (users[index].equals(login)) {
+            if (users.equals(login)) {
                 rsl = index;
                 break;
             }
