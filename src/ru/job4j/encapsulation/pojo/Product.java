@@ -1,4 +1,4 @@
-package ru.job4j.encapsulation.shop;
+package ru.job4j.encapsulation.pojo;
 
 public class Product {
     private String name;

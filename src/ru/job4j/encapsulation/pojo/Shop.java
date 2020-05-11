@@ -1,15 +1,16 @@
-package ru.job4j.encapsulation.shop;
+package ru.job4j.encapsulation.pojo;
 
 public class Shop {
     public static Product[] delete(Product[] products, int index) {
         products[index] = products[index + 1];
         for (int i = index + 1; i < products.length; i++) {
-            if (products[i] != null) {
-                products[i - 1] = products[i];
-                products[i] = null;
-            } else {
-                products[products.length - 1] = null;
-            }
+            products[products.length - 1] = null;
+//            if (products[i] != null) {
+//                products[i - 1] = products[i];
+//                products[i] = null;
+//            } else {
+//                products[products.length - 1] = null;
+//            }
         }
         return products;
     }
