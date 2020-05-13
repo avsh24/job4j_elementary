@@ -61,60 +61,22 @@ public class StartUI {
         while (run) {
             this.showMenu();
             int select = input.askInt("Select: ");
-//            int select = Integer.valueOf(input.askStr("Select: "));
             if (select == 0) {
                 StartUI.createItem(input, tracker);
-//                System.out.println("=== Create a new Item ====");
-//                String name = input.askStr("Enter name: ");
-//                Item item = new Item(name);
-//                tracker.add(item);
             } else if (select == 1) {
                 StartUI.findAll(tracker);
-//                System.out.println("=== Show all items ====");
-//                Item[] items = tracker.findAll();
-//                for (int index = 0; index < items.length; index++) {
-//                    System.out.println(items[index].getId() + " " + items[index].getName());
-//                }
                 run = false;
             } else if (select == 2) {
                 StartUI.replaceItem(input, tracker);
-//                System.out.println("=== Edit item ====");
-//                String id = input.askStr("Enter id: ");
-//                String name = input.askStr("Enter name: ");
-//                if (tracker.replace(id, new Item(name))) {
-//                    System.out.println("Item is successfully replaced!");
-//                } else {
-//                    System.out.println("Invalid id!");
-//                }
                 run = false;
             } else if (select == 3) {
                 StartUI.deteleItem(input, tracker);
-//                System.out.println("=== Delete item ====");
-//                String id = input.askStr("Enter id: ");
-//                if (tracker.delete(id)) {
-//                    System.out.println("Item is successfully delete!");
-//                } else {
-//                    System.out.println("Invalid id!");
-//                }
                 run = false;
             } else if (select == 4) {
                 StartUI.findById(input, tracker);
-//                System.out.println("=== Find item by id ====");
-//                String id = input.askStr("Enter id: ");
-//                Item item = tracker.findById(id);
-//                if (item != null) {
-//                    System.out.println(item.getId() + " " + item.getName());
-//                } else {
-//                    System.out.println("Item is not found!");
-//                }
                 run = false;
             } else if (select == 5) {
                 StartUI.findByName(tracker);
-//                System.out.println("=== Find items by name ====");
-//                Item[] items = tracker.findByName("Item");
-//                for (int index = 0; index < items.length; index++) {
-//                    System.out.println(items[index].getId() + " " + items[index].getName());
-//                }
                 run = false;
             } else if (select == 6) {
                 System.out.println("=== Exit Program ====");
