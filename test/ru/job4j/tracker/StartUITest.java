@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import org.junit.Test;
 import ru.job4j.encapsulation.tracker.*;
 
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
@@ -43,6 +44,6 @@ public class StartUITest {
         };
         StartUI.deteleItem(new StubInput(answers), tracker);
         Item replaced = tracker.findById(item.getId());
-        assertThat(replaced.getName(), is("delete item"));
+        assertThat(replaced, is(nullValue()));
     }
 }
