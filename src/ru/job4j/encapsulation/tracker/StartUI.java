@@ -108,15 +108,19 @@ public class StartUI {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new CreateAction(), new FindAllAction(), new ReplaceAction(),
-                new DeleteAction(), new FindByIdAction(), new FindByNameAction()
+                new CreateAction(),
+                new FindAllAction(),
+                new ReplaceAction(),
+                new DeleteAction(),
+                new FindByIdAction(),
+                new FindByNameAction()
         };
         new StartUI().init(input, tracker, actions);
-//        StartUI.createItem(input, tracker);
-//        StartUI.findAll(tracker);
-//        StartUI.replaceItem(input, tracker);
-//        StartUI.deteleItem(input, tracker);
-//        StartUI.findById(input, tracker);
-//        StartUI.findByName(tracker);
+        StartUI.createItem(input, tracker);
+        StartUI.findAll(tracker);
+        StartUI.replaceItem(input, tracker);
+        StartUI.deteleItem(input, tracker);
+        StartUI.findById(input, tracker);
+        StartUI.findByName(tracker);
     }
 }
