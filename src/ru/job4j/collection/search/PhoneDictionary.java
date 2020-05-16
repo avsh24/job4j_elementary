@@ -15,6 +15,15 @@ public class PhoneDictionary {
             if (person.getName().contains(key)) {
                 result.add(person);
             }
+            if (person.getSurname().contains(key)) {
+                result.add(person);
+            }
+            if (person.getPhone().contains(key)) {
+                result.add(person);
+            }
+            if (person.getAddress().contains(key)) {
+                result.add(person);
+            }
         }
         return result;
     }
