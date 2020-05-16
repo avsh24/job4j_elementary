@@ -1,6 +1,7 @@
 package ru.job4j.collection.search;
 
 public class Task {
+
     private String desc;
     private int priority;
 
