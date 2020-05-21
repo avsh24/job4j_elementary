@@ -33,10 +33,10 @@ public class ValidateInputTest {
         System.setOut(new PrintStream(mem));
         String[] data = {"10", "1"};
         ValidateInput input = new ValidateStubInput(data);
-        input.askInt("Enter", 1);
+        input.askInt("Enter", data.length);
         assertThat(
                 mem.toString(),
-                is(String.format("Enter%nPlease select key from menu.%nEnter%n"))
+                is(String.format("Please select key from menu.%n"))
         );
         System.setOut(out);
     }
