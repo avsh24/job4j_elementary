@@ -1,8 +1,8 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+import ru.job4j.encapsulation.tracker.StubInput;
 import ru.job4j.encapsulation.tracker.ValidateInput;
-import ru.job4j.encapsulation.tracker.ValidateStubInput;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -16,8 +16,10 @@ public class ValidateInputTest {
         ByteArrayOutputStream mem = new ByteArrayOutputStream();
         PrintStream out = System.out;
         System.setOut(new PrintStream(mem));
-        String[] data = {"one", "1"};
-        ValidateInput input = new ValidateStubInput(data);
+//        String[] data = {"one", "1"};
+        ValidateInput input = new ValidateInput(
+                new StubInput(new String[]{"one", "1"})
+        );
         input.askInt("Enter");
         assertThat(
                 mem,
@@ -31,9 +33,11 @@ public class ValidateInputTest {
         ByteArrayOutputStream mem = new ByteArrayOutputStream();
         PrintStream out = System.out;
         System.setOut(new PrintStream(mem));
-        String[] data = {"10", "1"};
-        ValidateInput input = new ValidateStubInput(data);
-        input.askInt("Enter", data.length);
+//        String[] data = {"10", "1"};
+        ValidateInput input = new ValidateInput(
+                new StubInput(new String[]{"10", "1"})
+        );
+        input.askInt("Enter");
         assertThat(
                 mem.toString(),
                 is(String.format("Please select key from menu.%n"))
