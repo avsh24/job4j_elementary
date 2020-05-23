@@ -1,5 +1,7 @@
 package ru.job4j.encapsulation.tracker;
 
+import java.util.ArrayList;
+
 public class StartUI {
     public static void createItem(Input input, Tracker tracker) {
         System.out.println("=== Creatr a new Item ====");
@@ -10,11 +12,17 @@ public class StartUI {
 
     public static void findAll(Tracker tracker) {
         System.out.println("=== Show all items ====");
-        Item[] items = tracker.findAll();
+        ArrayList<Item> items = new ArrayList<>();
+//        Item[] items = tracker.findAll();
         tracker.findAll();
-        for (int index = 0; index < items.length; index++) {
-            System.out.println(items[index].getId() + " " + items[index].getName());
+        for (Item item : items) {
+            if (item.getName().equals(item.getId())) {
+                items.add(item);
+            }
         }
+//        for (int index = 0; index < items.length; index++) {
+//            System.out.println(items[index].getId() + " " + items[index].getName());
+//        }
     }
 
     public static void replaceItem(Input input, Tracker tracker) {
@@ -28,11 +36,6 @@ public class StartUI {
         System.out.println("=== Delete item ====");
         String id = input.askStr("Enter id: ");
         tracker.delete(id);
-//        if (tracker.delete(id)) {
-//            System.out.println("Item is successfully delete!");
-//        } else {
-//            System.out.println("Invalid id!");
-//        }
     }
 
     public static void findById(Input input, Tracker tracker) {
@@ -48,10 +51,22 @@ public class StartUI {
 
     public static void findByName(Tracker tracker) {
         System.out.println("=== Find items by name ====");
-        Item[] items = tracker.findByName("Item");
-        for (int index = 0; index < items.length; index++) {
-            System.out.println(items[index].getId() + " " + items[index].getName());
+        ArrayList<Item> items = new ArrayList<>();
+        for (Item item : items) {
+            if (item.getName().equals(tracker)) {
+                items.add(item);
+            }
+//        Item[] result = new Item[this.position];
+//        for (int index = 0; index < this.position; index++) {
+//            if (items[index].getName().equals(key)) {
+//                result[count++] = this.items[index];
+//            }
+//        }
         }
+//        Item[] items = tracker.findByName("Item");
+//        for (int index = 0; index < items.length; index++) {
+//            System.out.println(items[index].getId() + " " + items[index].getName());
+//        }
     }
 
     public void init(Input input, Tracker tracker, UserAction[] actions) {
