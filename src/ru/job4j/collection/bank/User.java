@@ -2,6 +2,7 @@ package ru.job4j.collection.bank;
 
 import java.util.Objects;
 
+
 public class User {
     private String passport;
     private String username;
