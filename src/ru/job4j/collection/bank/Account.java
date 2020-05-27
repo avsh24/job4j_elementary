@@ -2,7 +2,6 @@ package ru.job4j.collection.bank;
 
 import java.util.Objects;
 
-
 public class Account {
     private String requisite;
     private double balance;
