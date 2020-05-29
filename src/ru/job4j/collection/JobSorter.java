@@ -12,7 +12,7 @@ public class JobSorter {
                 new Job("Fix bugs", 2),
                 new Job("X task", 0)
         );
-        Collections.sort(jobs, new JobDescByName().thenComparing(new JobDescByPriority()));
+        Collections.sort(jobs, new JobDescByNameDecrease().thenComparing(new JobDescByPriorityDecrease()));
         System.out.println(jobs);
     }
 }
