@@ -10,9 +10,9 @@ public class FI {
                 new Attachment("image 3", 120),
                 new Attachment("image 2", 23)
         };
-        Comparator<Attachment> comparator = (left, right) -> {
+        Comparator<Attachment> comparator = new Comparator<Attachment>() {
             @Override
-            public int compare (Attachment left, Attachment right) {
+            public int compare(Attachment left, Attachment right) {
                 return left.getSize() - right.getSize();
             }
         };
