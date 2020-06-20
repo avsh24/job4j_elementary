@@ -25,13 +25,8 @@ public class FI {
         for (Attachment att : list) {
             func.apply(att);
         }
-        Function<Attachment, InputStream> comparator = (left, right) -> {
-            @Override
-            public int compare(Attachment left, Attachment right) {
-                return left.getSize() - right.getSize();
-            }
-        };
-        Arrays.sort(list, func);
+        Comparator<Attachment> comparator = (o1, o2) -> o1.getSize() - o2.getSize();
+        list.sort(comparator);
         System.out.println(list);
     }
 }
