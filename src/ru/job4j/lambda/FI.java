@@ -12,6 +12,7 @@ public class FI {
                 new Attachment("image 3", 120),
                 new Attachment("image 2", 23)
         };
+
         Comparator<Attachment> comparator = new Comparator<Attachment>() {
             @Override
             public int compare(Attachment left, Attachment right) {
@@ -20,7 +21,26 @@ public class FI {
         };
         Arrays.sort(atts, comparator);
         System.out.println(atts);
+
+        String[] str = {
+                new String("image 4"),
+                new String("image 5"),
+                new String("image 6")
+        };
+
+        Comparator<String> cmpText = (left, right) -> left.compareTo(right);
+        Arrays.sort(str, cmpText);
+        for (String s : str) {
+            System.out.println(s + " ");
+        }
+
+        Comparator<String> cmpDescSize = (left, right) -> left.length() - right.length();
+        Arrays.sort(str, cmpDescSize);
+        for (String s : str) {
+            System.out.println(s + " ");
+        }
     }
+
     public static void raw(List<Attachment> list, Function<Attachment, InputStream> func) {
         for (Attachment att : list) {
             func.apply(att);
