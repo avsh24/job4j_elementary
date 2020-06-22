@@ -34,7 +34,7 @@ public class FI {
             System.out.println(s + " ");
         }
 
-        Comparator<String> cmpDescSize = (left, right) -> left.length() - right.length();
+        Comparator<String> cmpDescSize = (left, right) -> right.length() - left.length();
         Arrays.sort(str, cmpDescSize);
         for (String s : str) {
             System.out.println(s + " ");
