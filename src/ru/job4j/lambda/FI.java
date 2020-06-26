@@ -13,14 +13,22 @@ public class FI {
                 new Attachment("image 2", 23)
         };
 
-        Comparator<Attachment> comparator = new Comparator<Attachment>() {
-            @Override
-            public int compare(Attachment left, Attachment right) {
-                return left.getSize() - right.getSize();
-            }
+        Comparator<Attachment> comparator = (left, right) -> {
+            System.out.println("compare - " + left.getSize() + " : "
+                    + right.getSize());
+            return left.getSize() - right.getSize();
         };
         Arrays.sort(atts, comparator);
         System.out.println(atts);
+
+//        Comparator<Attachment> comparator = new Comparator<Attachment>() {
+//            @Override
+//            public int compare(Attachment left, Attachment right) {
+//                return left.getSize() - right.getSize();
+//            }
+//        };
+//        Arrays.sort(atts, comparator);
+//        System.out.println(atts);
 
         String[] str = {
                 new String("image 4"),
