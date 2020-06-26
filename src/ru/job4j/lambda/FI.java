@@ -18,6 +18,7 @@ public class FI {
                     + right.getSize());
             return left.getSize() - right.getSize();
         };
+
         Arrays.sort(atts, comparator);
         System.out.println(atts);
 
