@@ -23,6 +23,15 @@ public class Student {
         this.surname = surname;
     }
 
+    public Student(String surname, Integer score) {
+        this.surname = surname;
+        this.score = score;
+    }
+
+    public int compareTo(Student o) {
+        return Integer.compare(o.score, this.score);
+    }
+
     @Override
     public String toString() {
         return "Student{"
