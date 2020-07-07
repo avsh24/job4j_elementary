@@ -15,7 +15,7 @@ public class Matrix {
                 .collect(Collectors.toList()));
     }
 
-    public List<Integer> convertToList(Integer[][] array) {
+    public static List<Integer> convertToList(Integer[][] array) {
         return Stream.of(array).flatMap(Arrays::stream).collect(Collectors.toList());
     }
 }
