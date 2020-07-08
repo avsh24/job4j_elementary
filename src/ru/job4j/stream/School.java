@@ -17,7 +17,8 @@ public class School {
         return students.stream()
                 .collect(Collectors.toMap(
                         Student::getSurname,
-                        student -> student
+                        student -> student,
+                        (a, b) -> a
                 ));
     }
 }
