@@ -34,8 +34,8 @@ public class BankService {
             }
         }
         return rsl;
-//        return users.keySet().stream()
-//                .filter(user -> user.getPassport().equals(passport))
+        return users.keySet().stream()
+                .filter(user -> user.getPassport().equals(passport));
 //                .findFirst().orElse(null);
     }
 
@@ -55,7 +55,7 @@ public class BankService {
 //                    return account;
 //                }
 //            }
-//            return this.users.get(user).stream().filter(x -> x.getRequisite()
+            return this.users.get(user).stream().filter(x -> x.getRequisite());
 //                    .equals(requisite)).findFirst().orElse(null);
 //        }
         }
